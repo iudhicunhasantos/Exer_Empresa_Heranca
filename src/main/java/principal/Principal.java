@@ -1,11 +1,11 @@
 package principal;
-import restalrante.Restalrante;
+import restaurante.Restaurante;
 
 
 public class Principal {
 
     public static void main(String[] args) {
-       Restalrante emp = new Restalrante ();
+       Restaurante emp = new Restaurante ();
        emp.leitura();
        emp.imprimir();
     }

@@ -1,18 +1,18 @@
-package restalrante;
+package restaurante;
 
 import empresa.Empresa;
 import javax.swing.JOptionPane;
 
-public class Restalrante extends Empresa {
+public class Restaurante extends Empresa {
 
     private String tipocomida;
     private float precomedio;
 
-    public Restalrante() {
+    public Restaurante() {
         this("", (float) 0.0, "", "", "", "", "", "");
     }
 
-    public Restalrante(String tipocomida, float precomedio, String nome, String endereço, String cidade, String estado, String cep, String telefone) {
+    public Restaurante(String tipocomida, float precomedio, String nome, String endereço, String cidade, String estado, String cep, String telefone) {
         super(nome, endereço, cidade, estado, cep, telefone);
         this.tipocomida = tipocomida;
         this.precomedio = precomedio;
@@ -40,15 +40,10 @@ public class Restalrante extends Empresa {
         setTipocomida(JOptionPane.showInputDialog(null, "Escreva o tipo de comida:"));
         setPrecomedio(Float.parseFloat(JOptionPane.showInputDialog(null, "Escreva o preço médio:")));
     }
-
-    @Override
-    public void imprimir() {
-        super.imprimir();
-        JOptionPane.showMessageDialog(null, "\nTipo de comida: " + getTipocomida() +
-        "\nPreço médio:" + getPrecomedio());
-    }
+    
     @Override
     public String paraString(){
         return (super.paraString() + "\n Tipo de comida: " + getTipocomida() + "\n Preço médio: " + getPrecomedio() );
     }
+    
 }

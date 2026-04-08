@@ -82,16 +82,12 @@ public class Empresa {
     }
 
     public void imprimir() {
-        JOptionPane.showMessageDialog(null, "Nome:" + getNome() +
-         "\nEndereço:" + getEndereco() +
-        "\nCidade:" + getCidade() +
-        "\nEstado:" + getEstado() +
-        "\nCep:" + getCep() +
-         "\nTelefone:" + getTelefone() );
+        JOptionPane.showMessageDialog(null,paraString());
+        
 
     }
 
     public String paraString() {
-        return ("Nome: " + getNome() + "\n Endereço: " + getEndereco() + "\n Cidade: " + getCidade() + "\n Estado: " + getEstado() + "\n CEP: " + getCep() + "\n Telefone: " + getTelefone());
+        return ("Nome: " + getNome() + "\n Endereço: " +getEndereco() + "\n Cidade: " + getCidade() + "\n Estado: " + getEstado() + "\n CEP: " + getCep() + "\n Telefone: " + getTelefone());
     }
 }
